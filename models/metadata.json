@@ -1,0 +1,173 @@
+{
+  "target_column": "Churn",
+  "feature_columns": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "numeric_features": [
+    "SeniorCitizen",
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "categorical_features": [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "categorical_levels": {
+    "gender": [
+      "Male",
+      "Female"
+    ],
+    "Partner": [
+      "No",
+      "Yes"
+    ],
+    "Dependents": [
+      "No",
+      "Yes"
+    ],
+    "PhoneService": [
+      "Yes",
+      "No"
+    ],
+    "MultipleLines": [
+      "No",
+      "Yes",
+      "No phone service"
+    ],
+    "InternetService": [
+      "Fiber optic",
+      "DSL",
+      "No"
+    ],
+    "OnlineSecurity": [
+      "No",
+      "Yes",
+      "No internet service"
+    ],
+    "OnlineBackup": [
+      "No",
+      "Yes",
+      "No internet service"
+    ],
+    "DeviceProtection": [
+      "No",
+      "Yes",
+      "No internet service"
+    ],
+    "TechSupport": [
+      "No",
+      "Yes",
+      "No internet service"
+    ],
+    "StreamingTV": [
+      "No",
+      "Yes",
+      "No internet service"
+    ],
+    "StreamingMovies": [
+      "No",
+      "Yes",
+      "No internet service"
+    ],
+    "Contract": [
+      "Month-to-month",
+      "Two year",
+      "One year"
+    ],
+    "PaperlessBilling": [
+      "Yes",
+      "No"
+    ],
+    "PaymentMethod": [
+      "Electronic check",
+      "Mailed check",
+      "Bank transfer (automatic)",
+      "Credit card (automatic)"
+    ]
+  },
+  "numeric_summary": {
+    "SeniorCitizen": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 1.0
+    },
+    "tenure": {
+      "min": 0.0,
+      "median": 29.0,
+      "max": 72.0
+    },
+    "MonthlyCharges": {
+      "min": 18.25,
+      "median": 70.35,
+      "max": 118.75
+    },
+    "TotalCharges": {
+      "min": 18.8,
+      "median": 1397.475,
+      "max": 8684.8
+    }
+  },
+  "dropped_columns": [
+    "customerID"
+  ],
+  "selected_model": "logistic_regression",
+  "metrics": {
+    "logistic_regression": {
+      "f1": 0.6136,
+      "precision": 0.5043,
+      "recall": 0.7834,
+      "accuracy": 0.7381,
+      "roc_auc": 0.8415
+    },
+    "random_forest": {
+      "f1": 0.6124,
+      "precision": 0.5361,
+      "recall": 0.7139,
+      "accuracy": 0.7601,
+      "roc_auc": 0.8351
+    }
+  },
+  "class_labels": {
+    "0": "Stay",
+    "1": "Leave"
+  },
+  "prediction_threshold": 0.5,
+  "trained_at_utc": "2026-06-15T17:24:14.213885+00:00",
+  "artifacts": {
+    "model": "models/model.pkl",
+    "scaler": "models/scaler.pkl",
+    "encoder": "models/encoder.pkl"
+  }
+}
